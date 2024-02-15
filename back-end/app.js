@@ -4,11 +4,13 @@ const cors = require("cors");
 const path = require("path");
 const bodyParser = require("body-parser");
 const authRoter = require("./routes/auth");
+const userRoter = require("./routes/user");
 
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use("/auth/", authRoter);
+app.use("/user/", userRoter);
 
 module.exports = app;
