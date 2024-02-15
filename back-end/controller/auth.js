@@ -22,7 +22,7 @@ exports.register = async (req, res) => {
     $or: [{ email }, { username }],
   });
   if (duplicateInformation) {
-    return res.status().json({
+    return res.status(404).json({
       message: "The Information duplicated",
     });
   }
@@ -45,12 +45,12 @@ exports.register = async (req, res) => {
     expiresIn: "30 day",
   });
 
-  return res.status(201).json({ user, acsessToken });
+  return res.status(201).json({ user: userObject, acsessToken });
 };
 
 exports.login = async (req, res) => {
   const { data, password } = req.body;
-  const user = userModel.findOne({
+  const user = await userModel.findOne({
     $or: [{ username: data }, { email: data }],
   });
   if (!user) {
