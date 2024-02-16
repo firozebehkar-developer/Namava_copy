@@ -18,7 +18,7 @@ body {
       rgb(18, 18, 18) 46.875vw
     ),
     linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%),
-    url("./../../ast/img__header__container.jpg");
+    url("./../../src/assets/imgs/img__header__container.jpg");
 
   background-position: center;
   background-repeat: no-repeat;
