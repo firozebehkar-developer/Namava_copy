@@ -1,4 +1,4 @@
-"use strict";
+// "use strict";
 
 // import { Navbar } from "../components/Navbar/Navbar.js";
 
