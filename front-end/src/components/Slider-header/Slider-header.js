@@ -1,5 +1,7 @@
 let template = document.createElement("template")
 template.innerHTML = `
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+<link rel="stylesheet" href="./src/components/Slider-header/Slider-header.css">
 <div class="swiper mySwiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide div-1">Slide 1</div>
@@ -19,16 +21,45 @@ template.innerHTML = `
     </div>
     <div class="swiper-pagination"></div>
   </div>
-`
-class Slider_header extends HTMLElement{
 
-  constructor(){
-    super()
-    this.attachShadow({mode:'open'})
-    this.shadowRoot.appendChild(template.content.cloneNode(true))
+`
+
+class Slider_header extends HTMLElement {
+  constructor() {
+    super();
+    this.swiper = null;
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.appendChild(template.content.cloneNode(true));
   }
 
+  connectedCallback() {
+    this.initSwiper();
+  }
 
+  initSwiper() {
+    this.swiper = new Swiper(this.shadowRoot.querySelector('.swiper'), {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      effect: "fade",
+      keyboard: {
+        enabled: true,
+      },
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      navigation: {
+        nextEl: this.shadowRoot.querySelector('.swiper-button-next'),
+        prevEl: this.shadowRoot.querySelector('.swiper-button-prev'),
+      },
+      pagination: {
+        el: this.shadowRoot.querySelector('.swiper-pagination'),
+        clickable: true,
+      },
+    });
+  }
 }
-export { Slider_header }
+
+export {Slider_header}
 
