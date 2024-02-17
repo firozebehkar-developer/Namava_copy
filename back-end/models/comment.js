@@ -6,6 +6,12 @@ const commentSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
+  score: {
+    type: Number,
+    min: 1,
+    max: 5,
+    require: true,
+  },
   movie: {
     type: mongoose.Types.ObjectId,
     ref: "movie",
