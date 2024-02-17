@@ -1,14 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./src/css/index.css">
+  <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
   <title>Document</title>
-</head>
-<body>
-  <h1>صفحه اصلی</h1>
+  <style>
+    /*////////////// slider-header-start ///////////////////*/
+/* 
+    .swiper {
+      width: 100%;
+      height: 700px;
 
-  <script src="./src/js/app.js"></script>
+    }
+
+    .div-1 {
+      width: 100%;
+      height: 100%;
+      background-image: url('./src/assets/imgs/bg-div-1.jpg');
+      background-position: 50%;
+      object-fit: contain;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+
+    }
+
+    .div-1::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      background-color: rgba(14, 13, 13, 0.37);
+    }
+
+    .tst {
+      position: static;
+      position: absolute;
+      bottom: 70px;
+      left: 10px;
+      display: flex;
+      gap: 40px;
+      justify-content: center;
+      width: 200px;
+      padding: 5px;
+      height: max-content;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      position: static;
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: gray;
+      overflow: hidden;
+    }
+
+    .swiper-button-prev:hover,
+    .swiper-button-next:hover {
+      background-color: gray;
+    } */
+
+    /*////////////// slider-header-end ///////////////////*/
+  </style>
+</head>
+
+<body>
+
+  <!-- header -->
+  <site-navbar></site-navbar>
+
+
+
+  <!-- <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+      <div class="swiper-slide div-1">
+      </div>
+      <div class="swiper-slide div-2">Slide 2</div>
+      <div class="swiper-slide div-3">Slide 3</div>
+      <div class="swiper-slide div-4">Slide 4</div>
+      <div class="swiper-slide div-5">Slide 5</div>
+      <div class="swiper-slide div-6">Slide 6</div>
+      <div class="swiper-slide div-7">Slide 7</div>
+      <div class="swiper-slide div-8">Slide 8</div>
+      <div class="swiper-slide div-9">Slide 9</div>
+    </div>
+    <div class="tst">
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+  </div> -->
+  <!-- <div class="swiper-pagination"></div> -->
+
+  <!-- Swiper JS -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+  <script>
+    // var swiper = new Swiper(".mySwiper", {
+    //   cssMode: true,
+    //   navigation: {
+    //     nextEl: ".swiper-button-next",
+    //     prevEl: ".swiper-button-prev",
+    //   },
+    //   pagination: {
+    //     el: ".swiper-pagination",
+    //   },
+    //   mousewheel: true,
+    //   keyboard: true,
+
+    // });
+  </script>
+
+  <script type="module" src="./src/js/app.js"></script>
 </body>
+
 </html>

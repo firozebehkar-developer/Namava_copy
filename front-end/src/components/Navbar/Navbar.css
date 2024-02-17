@@ -1,0 +1,247 @@
+.Header {
+  position: relative;
+  width: 100%;
+  height: max-content;
+}
+
+/*////////////// navbar-start ///////////////////*/
+
+.navbar {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  background-color: rgba(18, 18, 18, 0);
+  transition: top 0.5s, box-shadow 0.5s, background-color 1s;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(18, 18, 18, 1),
+    rgba(18, 18, 18, 0)
+  );
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.navbar .men_right {
+  display: flex;
+  gap: 10px;
+  top: 15px;
+  right: 20px;
+  position: relative;
+  align-items: center;
+  height: max-content;
+  padding-right: 10px;
+}
+.navbar .men_right a {
+  display: flex;
+  width: max-content;
+  height: max-content;
+}
+.navbar .men_right .ul-menu-1 {
+  width: max-content;
+  list-style: none;
+  gap: 10px;
+  display: flex;
+}
+.navbar .men_right .ul-menu-1 li a {
+  text-decoration: none;
+  color: wheat;
+}
+
+.btn-menu-2 {
+  font-size: 16px;
+  padding: 5px;
+  border-radius: 10px;
+  border: 0px;
+  color: wheat;
+  display: flex;
+  gap: 5px;
+  background: none;
+}
+.svg-btn-menu-2 {
+  width: 20px;
+  color: wheat;
+}
+#svg2-btn-menu-2 {
+  display: none;
+}
+
+.div-menu-2 {
+  height: max-content;
+  width: 140px;
+  padding: 10px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+  left: -130px;
+  background-color: rgb(29, 25, 46);
+  display: none;
+}
+.ul-menu-2 {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.ul-menu-2 li {
+  width: 100%;
+  height: max-content;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  color: wheat;
+}
+.ul-menu-2 li a {
+  color: wheat;
+  text-decoration: none;
+  cursor: default;
+}
+
+.navbar .men_left {
+  display: flex;
+  gap: 15px;
+  top: 15px;
+  left: 20px;
+  position: relative;
+  align-items: center;
+  height: max-content;
+  padding-left: 10px;
+}
+.profile {
+  position: relative;
+}
+
+.profile .img_prof {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.svg-profile{
+  position: static;
+  position: absolute;
+  top: -12px;
+  left: 22px;
+}
+.svg-profile path{
+  fill: #d95c5c;
+}
+
+.div-data-profile {
+  position: absolute;
+  top: 55px;
+  left: -10px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px black;
+  display: none;
+}
+.div-ashtrak {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #d95c5c;
+  padding: 10px 0;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.div-ashtrak span {
+  color: wheat;
+}
+.div-ashtrak a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  width: 80%;
+  border-radius: 50px;
+  padding: 5px 0;
+  border: 0px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+  background-color: wheat;
+}
+.div-ashtrak a:hover {
+  background-color: #1993ff;
+  color: wheat;
+  cursor: pointer;
+}
+.tanzimat {
+  text-decoration: none;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+  height: 40px;
+}
+.tanzimat span {
+  position: relative;
+  top: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.div-data-profile button {
+  width: 100%;
+  direction: rtl;
+  display: flex;
+  gap: 5px;
+  border: 0px;
+  align-items: center;
+  cursor: pointer;
+
+}
+.div-data-profile ul {
+  list-style: none;
+  direction: rtl;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+}
+.div-data-profile ul li a {
+  width: 100%;
+  padding: 0 10px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+.div-data-profile .tanzimat:hover,
+.div-data-profile button:hover,
+.div-data-profile ul li a:hover {
+  color: #1993ff;
+}
+
+.btn-serach {
+  background: none;
+  width: max-content;
+  height: max-content;
+  border: 0px;
+}
+
+@media only screen and (max-width: 801px) {
+  .navbar .men_right .ul-menu-1,
+  .btn-serach {
+    display: none;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .div-menu-2,
+  .btn-menu-2 {
+    display: none;
+  }
+}
+
+/*////////////// navbar-end ///////////////////*/
