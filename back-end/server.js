@@ -4,8 +4,8 @@ const app = require("./app");
 
 const port = process.env.PORT;
 
-(async (req, res) => {
-  await mongoose.connect(process.env.Mongo_URL);
+(async () => {
+  await mongoose.connect(process.env.Mongo_URI);
   console.log("Database connected successfully");
 })();
 
