@@ -23,6 +23,12 @@ exports.banUser = async (req, res) => {
   });
 };
 
+exports.getAllUsers = async (req, res) => {
+  const users = await userModel.find({}, { password: 0 }).lean();
+
+  return res.json({ users });
+};
+
 exports.changeRole = async (req, res) => {
   const { id } = req.body;
   const isValidId = await isValidObjectId(id);
@@ -43,4 +49,47 @@ exports.changeRole = async (req, res) => {
   await userModel.findByIdAndUpdate({ _id: id }, { role: newRole });
 
   return res.json({ message: "User Role Apdated" });
+};
+
+exports.removeUser = async (req, res) => {
+  const id = req.params.id;
+  const isValidId = await isValidObjectId(id);
+
+  if (!isValidId) {
+    return res.status(409).json({
+      message: "The object Id Not Valid",
+    });
+  }
+
+  const removeUser = await userModel.findByIdAndDelete({ _id: id });
+  if (!removeUser) {
+    return res.status(403).json({
+      message: "User Not Found",
+    });
+  }
+  return res.json({
+    message: "user Removed Successfully",
+  });
+};
+
+exports.updateUser = async (req, res) => {
+  const { name, username, email, password, phone } = req.body;
+
+  const hashPassword = await bcrypt.hash(password, 10);
+
+  const user = await userModel
+    .findByIdAndUpdate(
+      { _id: req.user._id },
+      {
+        name,
+        username,
+        email,
+        password: hashPassword,
+        phone,
+      },
+      { new: true }
+    )
+    .select("-password");
+
+  return res.json(user);
 };
