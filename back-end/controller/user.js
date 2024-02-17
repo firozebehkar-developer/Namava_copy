@@ -22,3 +22,25 @@ exports.banUser = async (req, res) => {
     message: "User Ban successfully",
   });
 };
+
+exports.changeRole = async (req, res) => {
+  const { id } = req.body;
+  const isValidId = await isValidObjectId(id);
+
+  if (!isValidId) {
+    return res.status(409).json({
+      message: "The object Id Not Valid",
+    });
+  }
+
+  const user = await userModel.findById({ _id: id });
+  if (!user) {
+    return res.json({
+      message: "user Not Found",
+    });
+  }
+  const newRole = user.role === "ADMIN" ? "USER" : "ADMIN";
+  await userModel.findByIdAndUpdate({ _id: id }, { role: newRole });
+
+  return res.json({ message: "User Role Apdated" });
+};
