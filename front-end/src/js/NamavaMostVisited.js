@@ -1,15 +1,15 @@
 "use strict";
 
-import { Navbar } from "../components/Navbar/Navbar.js";
+// import { Navbar } from "../components/Navbar/Navbar.js";
 
-window.customElements.define("site-navbar", Navbar);
+// window.customElements.define("site-navbar", Navbar);
 
 const MainContainer = document.querySelector(".main__container");
 
 const displayCard = function () {
   MainContainer.innerHTML = "";
 
-  for (let i = 0; i < 6; i++) {
+  for (let i = 0; i < 11; i++) {
     const html = ` 
     <div class="container__card">
     <div class="img__container__card">
