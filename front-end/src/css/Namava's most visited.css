@@ -64,3 +64,27 @@ body {
   font-family: b yekan;
   font-weight: 200;
 }
+
+/* start footer */
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.footer__navbar__fixed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.8rem;
+  justify-content: space-evenly;
+  color: white;
+  background-color: rgb(41, 40, 40);
+  font-size: 15px;
+  font-family: b yekan;
+  font-weight: 200;
+}
+
+.footer__information {
+}
+.footer__secority {
+}
