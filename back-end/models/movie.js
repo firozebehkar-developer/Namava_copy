@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const Schema = new mongoose.Schema(
+const movieSchema = new mongoose.Schema(
   {
     title: {
       type: String,
@@ -36,6 +36,12 @@ const Schema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const movieModel = mongoose.model("movie", Schema);
+movieSchema.virtual("comments", {
+  ref: "comment",
+  localField: "_id",
+  foreignField: "movie",
+});
+
+const movieModel = mongoose.model("movie", movieSchema);
 
 module.exports = movieModel;
