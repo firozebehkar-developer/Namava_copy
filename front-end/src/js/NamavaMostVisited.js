@@ -1,8 +1,7 @@
 "use strict";
 
-// import { Navbar } from "../components/Navbar/Navbar.js";
-
-// window.customElements.define("site-navbar", Navbar);
+import {Navbar}  from "../components/Navbar/Navbar.js";
+window.customElements.define("site-navbar", Navbar);
 
 const MainContainer = document.querySelector(".main__container");
 
