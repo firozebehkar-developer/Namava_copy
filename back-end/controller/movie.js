@@ -35,10 +35,11 @@ exports.createMovie = async (req, res) => {
 };
 
 exports.addComment = async (req, res) => {
-  const { body, movie } = req.body;
+  const { body, movie, score } = req.body;
   const createComment = await commentModel.create({
     body,
     movie,
+    score,
   });
 
   if (!createComment) {
