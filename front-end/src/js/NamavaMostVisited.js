@@ -1,7 +1,9 @@
 "use strict";
-
 import {Navbar}  from "../components/Navbar/Navbar.js";
+import {Footer}  from "../components/Footer/Footer.js";
+
 window.customElements.define("site-navbar", Navbar);
+window.customElements.define("site-footer", Footer);
 
 const MainContainer = document.querySelector(".main__container");
 
