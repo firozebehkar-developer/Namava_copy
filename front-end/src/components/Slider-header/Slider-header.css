@@ -57,7 +57,7 @@
 }
 
 .div-cont {
-  height: max-content;
+  height: 80%;
   position: relative;
   display: flex;
   padding: 15px;
