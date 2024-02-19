@@ -5,28 +5,65 @@
   background:  linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw);
 }
 
-.div-1 {
+.div-1,.div-2,.div-3,.div-4,.div-5,.div-6,.div-7,.div-8,.div-9,.div-10 {
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-1.jpg");
-  background-position: 50%;
+  display: flex;
+  justify-content: end;
+  /* align-items: start; */
+  /* flex-direction: column; */
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  flex-direction: column;
+  background-position: 50%;
+  background-color: green;
+}
+.div-1{
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-1.jpg");
+}
+.div-2 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-2.jpg");
+}
+.div-3 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-3.jpg");
+}
+.div-4 {
+  background: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
+}
+.div-4 video {
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.div-5 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-5.jpg");
+}
+.div-6 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-6.jpg");
+}
+.div-7 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-7.jpg");
+}
+.div-8 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-8.jpg");
+}
+.div-9 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-8.jpg");
+}
+.div-10 {
+  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-8.jpg");
 }
 
 .div-cont {
-  width: 60%;
   height: max-content;
   position: relative;
   display: flex;
   padding: 15px;
   right: 30px;
   align-items: end;
-  gap: 20px;
+  gap: 15px;
   font-weight: 600;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   flex-direction: column;
@@ -34,7 +71,7 @@
 
 .div-cont .poster {
   max-width: 320px;
-  max-height: 80px;
+  max-height: 100px;
 }
 
 .div-data {
@@ -43,7 +80,9 @@
 }
 
 .div-data ul {
+  right: 40px;
   width: 100%;
+  position: relative;
   height: max-content;
   display: flex;
   gap: 15px;
@@ -117,55 +156,6 @@
 
 
 
-
-
-
-
-
-
-
-
-.div-2 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-2.jpg");
-}
-
-.div-3 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-3.jpg");
-}
-
-.div-4 {
-  background: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%);
-  position: relative;
-}
-
-.div-4 video {
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-
-}
-
-
-.div-5 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-5.jpg");
-}
-
-.div-6 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-6.jpg");
-}
-
-.div-7 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-7.jpg");
-}
-
-.div-7 {
-  background-image: linear-gradient(rgba(18, 18, 18, 0) 10vw, rgb(18, 18, 18) 46.875vw), linear-gradient(to left, rgba(18, 18, 18, 0.7), rgba(18, 18, 18, 0) 50%), url("../../assets/imgs/slider-header/bg-div-8.jpg");
-}
-
-
 .div-btn {
   position: static;
   position: absolute;
@@ -201,6 +191,11 @@
   background: wheat;
 }
 
+@media only screen and (min-width: 1300px) {
+  .div-cont{
+    margin-top: 70px;
+  }
+}
 @media only screen and (max-width: 1250px) {
   .swiper{
     height: 650px;
@@ -212,7 +207,11 @@
     display: none;
   }
   .div-cont{
-    margin-top: -70px;
+    margin-top: 100px;
+  }
+  .poster{
+    width: 400px;
+    height: 200px;
   }
 }
 @media only screen and (max-width: 900px) {
@@ -224,7 +223,7 @@
     width: 260px;
   }
   .div-cont{
-    margin-top: 80px;
+    margin-top: 70px;
   }
 }
 @media only screen and (max-width: 800px) {
@@ -236,13 +235,13 @@
     display: none;
   }
   .div-1{
-    background-position: 50%;
+    /* background-position: 50%; */
   }
   .swiper-pagination{
     display: block;
   }
   .div-cont{
-    margin-top: 0px;
+    margin-top: 40px;
   }
   .div-text{
     display: none;
