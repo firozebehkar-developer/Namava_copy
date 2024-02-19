@@ -412,7 +412,73 @@ template.innerHTML = `
     <p class="stars">ستارگان:گلاب آدینهپانته آ پناهی هاعلیرضا استادی</p>
   </div>
 </div>
-  <div class="swiper-slide div-7">Slide 7</div>
+<div class="swiper-slide div-7">
+<div class="div-cont">
+  <img class="poster" src="./src/assets/imgs/slider-header/img7.png" alt="">
+  <h1 class="text-p">توکیو وایس</h1>
+  <div class="div-data">
+    <ul>
+      <li>
+        <p>زیرنویس
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25" />
+          </svg>
+        </p>
+      </li>
+      <li>
+        <p> دوبله نماوا
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
+          </svg>
+        </p>
+      </li>
+      <li>
+        <p>88%
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+          </svg>
+        </p>
+      </li>
+      <li>
+        <p>6.3</p>
+      </li>
+      <li>
+        <p>
+          <span>99 </span> دقیقه
+        </p>
+      </li>
+      <li>
+        <p>1394</p>
+      </li>
+      <li>
+        <p>+12</p>
+      </li>
+    </ul>
+
+  </div>
+
+  <p class="text-p div-text">
+    پسری جوان به نام جیک که به عنوان اولین روزنامه نگار جنایی آمریکایی در توکیو استخدام شده است، به سرعت وظیفه پوشش دادن دو پرونده را به عهده می‌ گیرد، اما به زودی شغل و زندگی او در معرض خطر قرار می گیرند و...
+  </p>
+
+  <p class="text-p">هم اکنون با دوبله اختصاصی نماوا</p>
+  <div class="div-btna">
+    <a class="link-desc" href="#">
+      توضیحات بیشتر
+    </a>
+    <a class="link-ashtrak" href="#">
+      خرید اشتراک
+    </a>
+  </div>
+  <p class="stars">ستارگان:گلاب آدینهپانته آ پناهی هاعلیرضا استادی</p>
+</div>
+</div>
   <div class="swiper-slide div-8">Slide 8</div>
   <div class="swiper-slide div-9">Slide 9</div>
   <div class="swiper-slide div-9">Slide 10</div>
