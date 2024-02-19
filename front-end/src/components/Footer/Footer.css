@@ -1,0 +1,176 @@
+
+
+
+/* ----------------------------------------------------- start footer ------------------------------------------------------------ */
+.footer__container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* ----------------------------------------------------- part 1 ------------------------------------------------------------ */
+.footer__navbar__fixed {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.8rem;
+  justify-content: space-evenly;
+  color: white;
+  background-color: rgb(41, 40, 40);
+  font-size: 15px;
+  font-family: b yekan;
+  font-weight: 200;
+}
+.footer__navbar__fixed div {
+  fill: #ffffff;
+}
+
+/* ----------------------------------------------------- part 2 ------------------------------------------------------------ */
+.footer__information {
+  width: 100%;
+  padding: 1.9rem;
+  display: flex;
+  flex-direction: column;
+}
+.footer__information__logoAPP {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+.footer__logo__right {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.footer__logo__right div {
+  display: inline-block;
+  padding: 9px 4px;
+  background: linear-gradient(
+    to bottom,
+    rgba(25, 147, 255, 1),
+    rgba(0, 95, 180, 1)
+  );
+  text-align: center;
+  border-radius: 8px;
+  margin-left: 0.8rem;
+  fill: #ffffff;
+}
+.footer__logo__right h3 {
+  color: white;
+  font-size: 20px;
+  font-family: b yekan;
+  font-weight: 200;
+}
+.footer__logo__left {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.footer__logo__left div {
+  display: inline-block;
+  padding: 4px;
+  text-align: right;
+  margin-left: 16px;
+  border-radius: 6px;
+  background-color: #37383e;
+  margin-left: 0.8rem;
+}
+.footer__logo__left h3 {
+  color: rgb(71, 133, 224);
+  font-size: 18px;
+  font-family: b yekan;
+  font-weight: 200;
+}
+/* ----------------------------------------------------- part 3 ------------------------------------------------------------ */
+.footer__information__sana {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.9rem;
+}
+.footer__sana__right {
+  font-family: b yekan;
+  font-weight: 200;
+}
+.footer__sana__right h3 {
+  color: white;
+  font-size: 15px;
+}
+.footer__sana__right p {
+  color: rgb(139, 139, 139);
+  font-size: 13px;
+  width: 42.5rem;
+}
+.footer__sana__left {
+  display: flex;
+}
+.footer__sana__left div {
+  width: 90px;
+  height: 90px;
+  display: inline-block;
+  padding: 10px;
+  background: #cccccc;
+  text-align: center;
+  border-radius: 5px;
+  margin-right: 28px;
+}
+/* ----------------------------------------------------- part 4 ------------------------------------------------------------ */
+.footer__information__secority {
+  border-top: 0.5px solid #535353;
+  padding-top: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer__secority__right {
+  color: rgb(139, 139, 139);
+  font-size: 11px;
+  width: 40rem;
+  font-family: b yekan;
+}
+.footer__secority__left {
+  display: flex;
+  align-items: center;
+}
+.footer__secority__left div {
+  margin-right: 1.5rem;
+}
+/* -------------------------------------------- footer fack -------------------------------------------------------- */
+.footer__fack__container {
+  display: none;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 0.2rem;
+  justify-content: space-evenly;
+  color: rgb(139, 139, 139);
+  background-color: rgb(41, 40, 40);
+  font-size: 13px;
+  font-family: b yekan;
+  font-weight: 200;
+}
+.footer__fack__container div {
+  color: rgb(139, 139, 139);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media only screen and (max-width: 790px) {
+  .footer__fack__container {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+  }
+  .footer__container {
+    display: none;
+  }
+  .footer__sana__right p {
+    width: 30rem;
+  }
+}
+@media only screen and (max-width: 1005px) {
+  .footer__sana__right p {
+    width: 30rem;
+  }
+}
