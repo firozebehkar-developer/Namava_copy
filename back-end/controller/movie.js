@@ -10,11 +10,11 @@ exports.createMovie = async (req, res) => {
     time,
     director,
     actors,
+    grouping,
     releaseYear,
     publicationStatus,
     translation,
     ageLimit,
-    preview,
   } = req.body;
   const createMovie = await movieModel.create({
     name,
@@ -25,11 +25,12 @@ exports.createMovie = async (req, res) => {
     time,
     director,
     actors,
+    grouping,
     releaseYear,
     publicationStatus,
     translation,
     ageLimit,
-    preview,
+    preview: req.file.filename,
   });
   if (createMovie) {
     return res.status(201).json({
