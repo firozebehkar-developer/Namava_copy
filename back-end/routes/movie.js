@@ -11,6 +11,4 @@ router
   .route("/create")
   .post(authMiddleware, isAdminMiddleware, movieController.createMovie);
 
-router.route("/comment").post(authMiddleware, movieController.addComment);
-
 module.exports = router;

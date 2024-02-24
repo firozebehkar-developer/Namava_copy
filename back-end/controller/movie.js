@@ -42,28 +42,6 @@ exports.createMovie = async (req, res) => {
   });
 };
 
-exports.addComment = async (req, res) => {
-  const { body, movie, score } = req.body;
-  const createComment = await commentModel.create({
-    body,
-    movie,
-    score,
-    author: req.user._id,
-  });
-
-  if (!createComment) {
-    return res.status(500).json({
-      message: "Server Error",
-    });
-  }
-
-  const userComments = await commentModel
-    .findById(createComment._id)
-    .populate("author", "-password");
-
-  return res.status(201).json(userComments);
-};
-
 exports.getOne = async (req, res) => {
   const { title } = req.params;
 
