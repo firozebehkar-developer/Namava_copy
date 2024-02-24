@@ -3,26 +3,34 @@ const commentModel = require("./../models/comment");
 
 exports.createMovie = async (req, res) => {
   const {
-    title,
+    name,
     description,
+    href,
+    categoryId,
+    time,
     director,
     actors,
-    genres,
+    grouping,
     releaseYear,
-    screeningStatus,
-    Translation,
+    publicationStatus,
+    translation,
     ageLimit,
   } = req.body;
   const createMovie = await movieModel.create({
-    title,
+    name,
     description,
+    cover: req.file.filename,
+    href,
+    categoryId,
+    time,
     director,
     actors,
-    genres,
+    grouping,
     releaseYear,
-    screeningStatus,
-    Translation,
+    publicationStatus,
+    translation,
     ageLimit,
+    preview: req.file.filename,
   });
   if (createMovie) {
     return res.status(201).json({
@@ -40,15 +48,20 @@ exports.addComment = async (req, res) => {
     body,
     movie,
     score,
+    author: req.user._id,
   });
 
   if (!createComment) {
-    returnres.status(500).json({
+    return res.status(500).json({
       message: "Server Error",
     });
   }
 
-  return res.status(201).json({ message: "Set Comment Successfully" });
+  const userComments = await commentModel
+    .findById(createComment._id)
+    .populate("author", "-password");
+
+  return res.status(201).json(userComments);
 };
 
 exports.getOne = async (req, res) => {
