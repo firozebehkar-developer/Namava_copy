@@ -32,7 +32,7 @@ const movieSchema = new mongoose.Schema(
       required: true,
     },
     actors: [String],
-    grouping: [Steing],
+    grouping: [String],
     releaseYear: {
       type: Number,
       required: true,
