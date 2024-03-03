@@ -57,3 +57,25 @@ exports.getOne = async (req, res) => {
 
   return res.json({ movie, comment });
 };
+
+exports.remove = async (req, res) => {
+  const isValidId = isValidObjectId(req.params.id);
+
+  if (!isValidId) {
+    return res.status(409).json({
+      message: "ObjectId not valid",
+    });
+  }
+
+  const removeMovie = await movieModel.findOneAndDelete({
+    _id: req.params.id,
+  });
+
+  if (!removeMovie) {
+    return res.status(409).json({
+      message: "course not found",
+    });
+  }
+
+  return res.json(removeMovie);
+};
