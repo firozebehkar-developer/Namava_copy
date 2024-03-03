@@ -19,4 +19,8 @@ router
   .route("/:id/reject")
   .put(authMiddleware, isAdminMiddleware, commentController.reject);
 
+router
+  .route("/:id/answer")
+  .post(authMiddleware, isAdminMiddleware, commentController.answer);
+
 module.exports = router;

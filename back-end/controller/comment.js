@@ -103,3 +103,41 @@ exports.reject = async (req, res) => {
 
   return res.json({ message: "Comment rejected" });
 };
+
+exports.answer = async (req, res) => {
+  const id = req.params.id;
+  const validId = mongoose.Types.ObjectId.isValid(id);
+  const { body } = req.body;
+
+  if (!validId) {
+    return res.status(404).jsonn({
+      message: "Object id not valid",
+    });
+  }
+  const acceptComment = await commentModel.findOneAndUpdate(
+    {
+      _id: id,
+    },
+    {
+      isAccept: 1,
+    }
+  );
+  console.log(acceptComment);
+
+  if (!acceptComment) {
+    return res.status(404).jsonn({
+      message: "Comment id not found",
+    });
+  }
+
+  const answerComment = await commentModel.create({
+    body,
+    course: acceptComment.course,
+    author: req.user._id,
+    isAnswer: 1,
+    isAccept: 1,
+    mainCommentId: id,
+  });
+
+  return res.status(201).json(answerComment);
+};
