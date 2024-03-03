@@ -47,3 +47,59 @@ exports.remove = async (req, res) => {
   }
   return res.json(remove);
 };
+
+exports.accept = async (req, res) => {
+  const id = req.params.id;
+  const validId = mongoose.Types.ObjectId.isValid(id);
+
+  if (!validId) {
+    return res.status(404).jsonn({
+      message: "Object id not valid",
+    });
+  }
+
+  const acceptComment = await commentModel.findOneAndUpdate(
+    {
+      _id: id,
+    },
+    {
+      isAccept: 1,
+    }
+  );
+
+  if (!acceptComment) {
+    return res.status(409).json({
+      message: "comment not found",
+    });
+  }
+
+  return res.json({ message: "Comment accepted" });
+};
+
+exports.reject = async (req, res) => {
+  const id = req.params.id;
+  const validId = mongoose.Types.ObjectId.isValid(id);
+
+  if (!validId) {
+    return res.status(404).jsonn({
+      message: "Object id not valid",
+    });
+  }
+
+  const rejectComment = await commentModel.findOneAndUpdate(
+    {
+      _id: id,
+    },
+    {
+      isAccept: 0,
+    }
+  );
+
+  if (!rejectComment) {
+    return res.status(409).json({
+      message: "comment not found",
+    });
+  }
+
+  return res.json({ message: "Comment rejected" });
+};
