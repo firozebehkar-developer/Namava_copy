@@ -13,6 +13,6 @@ router
 
 router
   .route("/:id")
-  .delete(authMiddlware, isAdminMiddlware, courseController.remove);
+  .delete(authMiddlware, isAdminMiddlware, movieController.remove);
 
 module.exports = router;
