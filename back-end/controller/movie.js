@@ -42,28 +42,6 @@ exports.createMovie = async (req, res) => {
   });
 };
 
-exports.addComment = async (req, res) => {
-  const { body, movie, score } = req.body;
-  const createComment = await commentModel.create({
-    body,
-    movie,
-    score,
-    author: req.user._id,
-  });
-
-  if (!createComment) {
-    return res.status(500).json({
-      message: "Server Error",
-    });
-  }
-
-  const userComments = await commentModel
-    .findById(createComment._id)
-    .populate("author", "-password");
-
-  return res.status(201).json(userComments);
-};
-
 exports.getOne = async (req, res) => {
   const { title } = req.params;
 
@@ -78,4 +56,26 @@ exports.getOne = async (req, res) => {
     .lean();
 
   return res.json({ movie, comment });
+};
+
+exports.remove = async (req, res) => {
+  const isValidId = isValidObjectId(req.params.id);
+
+  if (!isValidId) {
+    return res.status(409).json({
+      message: "ObjectId not valid",
+    });
+  }
+
+  const removeMovie = await movieModel.findOneAndDelete({
+    _id: req.params.id,
+  });
+
+  if (!removeMovie) {
+    return res.status(409).json({
+      message: "course not found",
+    });
+  }
+
+  return res.json(removeMovie);
 };
